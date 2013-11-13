@@ -5,6 +5,10 @@ UpcBarcodeScanner::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'barcode#index'
 
+  get '/search-brand/:upc', to: 'barcode#search_brand'
+
+  get '/search-nutrition/:upc', to: 'barcode#search_nutrition'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
