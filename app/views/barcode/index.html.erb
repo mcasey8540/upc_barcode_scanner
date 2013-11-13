@@ -29,12 +29,13 @@ $( document ).ready(function() {
 });
 </script>
 
+<body style="margin: 30px;">
+	<h3>Enter UPC Code</h3>
+	<input id="upc-input" style="width:200px;" /><button class="btn btn-primary" id="upc-submit" style="margin-left: 10px;">Search</button>
 
-<h3>Enter UPC Code</h3>
-<input id="upc-input" style="width:200px;" /><button class="btn btn-primary" id="upc-submit">Search</button>
+	<h4>Brand Info:</h4>
+	<textarea id="upc-brand-results" style="width:300px;height:200px;"></textarea>
 
-<h4>Brand Info:</h4>
-<textarea id="upc-brand-results" style="width:300px;height:200px;"></textarea>
-
-<h4>Nutrition Info:</h4>
-<textarea id="upc-nutrition-results" style="width:300px;height:200px;"></textarea>
+	<h4>Nutrition Info:</h4>
+	<textarea id="upc-nutrition-results" style="width:300px;height:200px;"></textarea>
+</body>
