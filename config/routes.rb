@@ -9,6 +9,8 @@ UpcBarcodeScanner::Application.routes.draw do
 
   get '/search-nutrition/:upc', to: 'barcode#search_nutrition'
 
+  get '/nutritionix', to: 'barcode#nutritionix'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

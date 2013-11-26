@@ -1,0 +1,41 @@
+<script>
+$( document ).ready(function() {
+    $('#upc-submit').click(function(){
+    	var upcValue = $("#upc-input").val();
+
+			$.ajax({
+			  dataType: "json",
+			  url: "/search-brand/" + upcValue,
+			  success: function(data){
+			  	 results = formatResults(data.result);
+			  	$("#upc-brand-results").val(results);
+			  }
+			});
+
+			$.ajax({
+			  dataType: "json",
+			  url: "/search-nutrition/" + upcValue,
+			  success: function(data){
+			  	 results = formatResults(data.result);
+			  	$("#upc-nutrition-results").val(results);
+			  }
+			});			
+
+			formatResults = function(data){
+				return JSON.stringify(data);
+			}
+
+    });
+});
+</script>
+<h3>Nutritionix</h3>
+<body style="margin: 30px;">
+	<h3>Enter UPC Code</h3>
+	<input id="upc-input" style="width:200px;" /><button class="btn btn-primary" id="upc-submit" style="margin-left: 10px;">Search</button>
+
+	<h4>Brand Info:</h4>
+	<textarea id="upc-brand-results" style="width:300px;height:200px;"></textarea>
+
+	<h4>Nutrition Info:</h4>
+	<textarea id="upc-nutrition-results" style="width:300px;height:200px;"></textarea>
+</body>

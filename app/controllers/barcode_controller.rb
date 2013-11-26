@@ -55,7 +55,9 @@ class BarcodeController < ApplicationController
 
 	end
 
+	def nutritionix
 
+	end
 
 end	
 
